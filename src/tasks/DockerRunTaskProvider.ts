@@ -56,7 +56,7 @@ export class DockerRunTaskProvider extends DockerTaskProvider {
 
         const options = definition.dockerRun;
         const command = await client.runContainer({
-            detached: true,
+            detached: options.detached,
             publishAllPorts: options.portsPublishAll || (options.portsPublishAll === undefined && (options.ports === undefined || options.ports.length < 1)),
             name: options.containerName,
             network: options.network,

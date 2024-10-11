@@ -26,6 +26,7 @@ export interface DockerContainerVolume {
 export interface DockerRunOptions {
     command?: string | string[];
     containerName?: string;
+    detached?: boolean;
     entrypoint?: string;
     env?: { [key: string]: string };
     envFiles?: string[];
